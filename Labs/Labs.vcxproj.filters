@@ -18,13 +18,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="task1.cpp">
+    <ClCompile Include="task5.cpp">
       <Filter>Исходные файлы\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="task4.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="task3.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Task2.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Task3.cpp">
+    <ClCompile Include="task1.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="task6.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="task7.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="task8.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
