@@ -10,6 +10,7 @@
 #include<math.h>
 using namespace std;
 int main() {
+    setlocale(LC_ALL, "rus");
     int nums[] = { 1, -2, 32, -40, 100, 2, 33, -5, -9, 2, -1 };
     int min = nums[0];
     int max = nums[0];
@@ -17,6 +18,7 @@ int main() {
     int multiply=1;
     int sum = 0;
     int length = sizeof(nums) / sizeof(nums[0]);
+
     for (int i = 0; i < length; i++)
     {
         if (nums[i] > 0)
@@ -25,18 +27,41 @@ int main() {
         }
         if (min > nums[i]) {
             min = nums[i];
-            x = i;
+            x = i; //запоминаем индекс
         }
     }
     for (int i = 0; i < x; i++) {
         sum += nums[i]; //   сумму элементов массива, расположенных до минимального элемента.
     }
-    cout << multiply << "  " << sum << "  " << min;
+    cout << multiply << " << Умножение " << sum << " << Сумма " << min << endl;
+
+    //   Упорядочить по возрастанию отдельно элементы, стоящие на четных местах, и элементы, стоящие на нечетных местах.
+
     for (int i = 0; i < length; i++) {
-         for (int j = 0; j < length; i++) {
-             if (nums[i] > nums[j]) {
-                 nums[i] = nums[j];
-             }
+        if (fmod(i, 2) == 0) {
+            for (int j = 0+i; j < length; j++) {
+                if (fmod(j, 2) == 0) {
+                    if (nums[i] > nums[j]) {
+                        int f = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = f;
+                    }
+                }
+            }
         }
+        else if (fmod(i, 2) != 0) {
+            for (int j = 0+i; j < length; j++) {
+                if (fmod(j, 2) != 0) {
+                    if (nums[i] > nums[j]) {
+                        int f = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = f;
+                    }
+                }
+            }
+        }
+    } //   Вывод
+    for (int i = 0; i < length; i++) {
+        cout << nums[i] << " ";
     }
 }
