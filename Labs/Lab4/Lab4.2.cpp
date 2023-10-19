@@ -13,7 +13,7 @@ int main()
 		int counter = 0;
 		bool flag = false;
 		for (int j = 0; j < 5; j++) {
-			a[i][j] = 10-rand()%20;
+			a[i][j] = 9 - rand() % 19;
 			cout << a[i][j] <<  " ";
 			if (a[i][j] < 0) {
 				counter++;
