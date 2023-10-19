@@ -29,6 +29,7 @@ int calc(int mas[][5])
 }
 int a[5][5];
 int main() {
+	setlocale(LC_ALL, "rus");
 	cout << ":::::::::: Before :::::::::::\n";
 	srand(time(NULL));
 	for (int i = 0; i < 5; i++) {

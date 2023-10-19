@@ -7,6 +7,7 @@ using namespace std;
 int a[5][5];
 int main()
 {
+	setlocale(LC_ALL, "rus");
 	int a[5][5];
 	srand(time(NULL));
 	for (int i = 0; i < 5; i++) {
